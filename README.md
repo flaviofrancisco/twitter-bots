@@ -12,7 +12,9 @@ pip3 install --user tweepy
 
 ## auth.py
 
-This file is where you will put your credentials from your Twitter Developers Account.
+This file is where you will put your credentials from your [Twitter Developers Account](https://developer.twitter.com/en).
+For your security never put your token keys explicitly on remote servers.
+
 ```python
     auth = tweepy.OAuthHandler(consumer_key='', consumer_secret='')
     auth.set_access_token(key='', secret='')
