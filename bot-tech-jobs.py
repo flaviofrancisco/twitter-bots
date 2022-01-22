@@ -8,10 +8,8 @@ def scrape(words, date_since, numtweet, language):
                     words, lang=language,
                     since_id=date_since,
                     tweet_mode='extended').items(numtweet)
-
-    list_tweets = [tweet for tweet in tweets]
-
-    for tweet in list_tweets:
+    
+    for tweet in tweets:
         status = api.get_status(tweet.id)
         if not status.retweeted:
             api.retweet(tweet.id)
